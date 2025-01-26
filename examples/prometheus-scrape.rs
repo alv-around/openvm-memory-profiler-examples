@@ -1,33 +1,29 @@
 use axum::{routing::get, Router};
-use metrics_process::Collector;
 use openvm_prof::recorder::install_prometheus_recorder;
-use tokio::{net::TcpListener, task};
+use std::time::Duration;
+use tokio::net::TcpListener;
+// use tracing::{span, Level};
 
 use openvm_node::proof_and_verify_fib;
 
-#[tokio::main]
+#[tokio::main(flavor = "multi_thread", worker_threads = 4)]
 async fn main() {
     let recorder = install_prometheus_recorder();
-    let collector = Collector::default();
-    collector.describe();
+    recorder.spawn_process_metrics_thread(Duration::from_secs(10));
 
-    let handle = recorder.handle().clone();
     let app = Router::new()
         .route(
             "/metrics",
-            get(move || {
-                collector.collect();
-                let metrics = handle.render();
-                handle.run_upkeep();
+            get(|| {
+                let metrics = recorder.handle().render();
                 std::future::ready(metrics)
             }),
         )
         .route(
             "/example",
             get(|| {
-                task::spawn_blocking(|| {
-                    proof_and_verify_fib().unwrap();
-                });
+                // FIXME: calling this endpoint will memory starve /metrics
+                proof_and_verify_fib().unwrap();
                 std::future::ready("proving job started")
             }),
         );
