@@ -1,0 +1,29 @@
+[package]
+name = "openvm-node"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+axum = "0.7.2"
+metrics = "0.22.0"
+metrics-exporter-prometheus = { version = "0.13.0", default-features = false }
+metrics-process = "2.4.0"
+tokio = { version = "1.20.1", features = ["full"] }
+tracing = "0.1.41"
+
+openvm-stark-sdk = { git = "https://github.com/openvm-org/stark-backend.git", rev = "d2788c", default-features = false }
+openvm-sdk = { path = "../openvm/crates/sdk" }
+openvm = { path = "../openvm/crates/toolchain/openvm" }
+openvm-build = { path = "../openvm/crates/toolchain/build/" }
+openvm-native-recursion = { path = "../openvm/extensions/native/recursion" }
+openvm-transpiler = { path = "../openvm/crates/toolchain/transpiler" }
+openvm-prof = { path = "../openvm/crates/prof" }
+eyre = "0.6.12"
+serde = "1.0.26"
+reqwest = "0.12.12"
+
+[features]
+default = []
+std = ["openvm/std"]
