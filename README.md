@@ -2,7 +2,9 @@
 
 In this repo there are two examples how to use the memory profiler for Openvm:
 
-1. `prometheus-scrape.rs` -> the "standard" process in prometheus, allow prometheus to get the metrics through "/metrics" endpoint.
+1. `prometheus-scrape.rs` -> the "standard" process in prometheus,
+allow prometheus to get the metrics through "/metrics" endpoint.
+1. `prometheus-push.rs` -> a script to sends metrics through the prometheus push-gateway.
 
 ## Usage
 
@@ -15,5 +17,5 @@ In this repo there are two examples how to use the memory profiler for Openvm:
 1. run either `prometheus-scrape` or `prometheus-push` with:
 
   ```console
-  cargo run -- --exampl <EXAMPLE_NAME>
+  cargo run --example <EXAMPLE_NAME>
   ```
