@@ -7,12 +7,12 @@ edition = "2021"
 [dependencies]
 
 openvm-stark-sdk = { git = "https://github.com/openvm-org/stark-backend.git", rev = "d2788c", default-features = false }
-openvm-sdk = { path = "../openvm/crates/sdk" }
-openvm = { path = "../openvm/crates/toolchain/openvm" }
-openvm-build = { path = "../openvm/crates/toolchain/build/" }
-openvm-native-recursion = { path = "../openvm/extensions/native/recursion" }
-openvm-transpiler = { path = "../openvm/crates/toolchain/transpiler" }
-openvm-prof = { path = "../openvm/crates/prof" }
+openvm-sdk = { git = "https://github.com/alv-around/openvm", branch = "prometheus-recorder" }
+openvm = { git = "https://github.com/alv-around/openvm", branch = "prometheus-recorder" }
+openvm-build = { git = "https://github.com/alv-around/openvm", branch = "prometheus-recorder" }
+openvm-native-recursion = { git = "https://github.com/alv-around/openvm", branch = "prometheus-recorder" }
+openvm-transpiler = { git = "https://github.com/alv-around/openvm", branch = "prometheus-recorder" }
+openvm-prof = { git = "https://github.com/alv-around/openvm", branch = "prometheus-recorder" }
 eyre = "0.6.12"
 serde = "1.0.26"
 reqwest = "0.12.12"
