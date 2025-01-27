@@ -1096,6 +1096,17 @@ dependencies = [
 ]
 
 [[package]]
+name = "derive-new"
+version = "0.7.0"
+source = "registry+https://github.com/rust-lang/crates.io-index"
+checksum = "2cdc8d50f426189eef89dac62fabfa0abb27d5cc008f25bf4156a0203325becc"
+dependencies = [
+ "proc-macro2",
+ "quote",
+ "syn 2.0.96",
+]
+
+[[package]]
 name = "derive_more"
 version = "0.99.18"
 source = "registry+https://github.com/rust-lang/crates.io-index"
@@ -2813,7 +2824,7 @@ dependencies = [
 [[package]]
 name = "openvm"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "bytemuck",
  "hex-literal",
@@ -2827,9 +2838,9 @@ dependencies = [
 [[package]]
 name = "openvm-algebra-circuit"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
- "derive-new",
+ "derive-new 0.6.0",
  "derive_more 1.0.0",
  "itertools 0.13.0",
  "num-bigint 0.4.6",
@@ -2856,7 +2867,7 @@ dependencies = [
 [[package]]
 name = "openvm-algebra-complex-macros"
 version = "0.1.0"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "openvm-macros-common",
  "quote",
@@ -2866,7 +2877,7 @@ dependencies = [
 [[package]]
 name = "openvm-algebra-guest"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "halo2curves-axiom",
  "num-bigint 0.4.6",
@@ -2882,7 +2893,7 @@ dependencies = [
 [[package]]
 name = "openvm-algebra-moduli-macros"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "openvm-macros-common",
  "quote",
@@ -2892,7 +2903,7 @@ dependencies = [
 [[package]]
 name = "openvm-algebra-transpiler"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "openvm-algebra-guest",
  "openvm-instructions",
@@ -2907,9 +2918,9 @@ dependencies = [
 [[package]]
 name = "openvm-bigint-circuit"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
- "derive-new",
+ "derive-new 0.6.0",
  "derive_more 1.0.0",
  "openvm-bigint-transpiler",
  "openvm-circuit",
@@ -2929,7 +2940,7 @@ dependencies = [
 [[package]]
 name = "openvm-bigint-guest"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "num-bigint 0.4.6",
  "num-traits",
@@ -2942,7 +2953,7 @@ dependencies = [
 [[package]]
 name = "openvm-bigint-transpiler"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "openvm-bigint-guest",
  "openvm-instructions",
@@ -2957,7 +2968,7 @@ dependencies = [
 [[package]]
 name = "openvm-build"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "cargo_metadata",
  "dirs",
@@ -2972,14 +2983,14 @@ dependencies = [
 [[package]]
 name = "openvm-circuit"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "async-trait",
  "backtrace",
  "bitcode",
  "cfg-if",
  "derivative",
- "derive-new",
+ "derive-new 0.6.0",
  "derive_more 1.0.0",
  "enum_dispatch",
  "eyre",
@@ -3008,7 +3019,7 @@ dependencies = [
 [[package]]
 name = "openvm-circuit-derive"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "itertools 0.13.0",
  "proc-macro2",
@@ -3019,10 +3030,10 @@ dependencies = [
 [[package]]
 name = "openvm-circuit-primitives"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "bitcode",
- "derive-new",
+ "derive-new 0.6.0",
  "itertools 0.13.0",
  "lazy_static",
  "num-bigint 0.4.6",
@@ -3036,7 +3047,7 @@ dependencies = [
 [[package]]
 name = "openvm-circuit-primitives-derive"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "itertools 0.13.0",
  "proc-macro2",
@@ -3047,7 +3058,7 @@ dependencies = [
 [[package]]
 name = "openvm-custom-insn"
 version = "0.1.0"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -3057,9 +3068,9 @@ dependencies = [
 [[package]]
 name = "openvm-ecc-circuit"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
- "derive-new",
+ "derive-new 0.6.0",
  "derive_more 1.0.0",
  "eyre",
  "itertools 0.13.0",
@@ -3088,7 +3099,7 @@ dependencies = [
 [[package]]
 name = "openvm-ecc-guest"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "ecdsa",
  "elliptic-curve",
@@ -3114,7 +3125,7 @@ dependencies = [
 [[package]]
 name = "openvm-ecc-sw-macros"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "openvm-macros-common",
  "quote",
@@ -3124,7 +3135,7 @@ dependencies = [
 [[package]]
 name = "openvm-ecc-transpiler"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "openvm-ecc-guest",
  "openvm-instructions",
@@ -3138,10 +3149,10 @@ dependencies = [
 [[package]]
 name = "openvm-instructions"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "backtrace",
- "derive-new",
+ "derive-new 0.6.0",
  "itertools 0.13.0",
  "num-bigint 0.4.6",
  "num-traits",
@@ -3155,7 +3166,7 @@ dependencies = [
 [[package]]
 name = "openvm-instructions-derive"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -3165,10 +3176,10 @@ dependencies = [
 [[package]]
 name = "openvm-keccak256-circuit"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "bitcode",
- "derive-new",
+ "derive-new 0.6.0",
  "derive_more 1.0.0",
  "eyre",
  "hex-literal",
@@ -3194,7 +3205,7 @@ dependencies = [
 [[package]]
 name = "openvm-keccak256-guest"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "openvm-platform",
  "serde",
@@ -3204,7 +3215,7 @@ dependencies = [
 [[package]]
 name = "openvm-keccak256-transpiler"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "openvm-instructions",
  "openvm-instructions-derive",
@@ -3218,7 +3229,7 @@ dependencies = [
 [[package]]
 name = "openvm-macros-common"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "syn 2.0.96",
 ]
@@ -3226,7 +3237,7 @@ dependencies = [
 [[package]]
 name = "openvm-mod-circuit-builder"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "itertools 0.13.0",
  "num-bigint 0.4.6",
@@ -3245,10 +3256,10 @@ dependencies = [
 [[package]]
 name = "openvm-native-circuit"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "bitcode",
- "derive-new",
+ "derive-new 0.6.0",
  "derive_more 1.0.0",
  "eyre",
  "itertools 0.13.0",
@@ -3273,7 +3284,7 @@ dependencies = [
 [[package]]
 name = "openvm-native-compiler"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "backtrace",
  "itertools 0.13.0",
@@ -3296,7 +3307,7 @@ dependencies = [
 [[package]]
 name = "openvm-native-compiler-derive"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "proc-macro2",
  "quote",
@@ -3306,7 +3317,7 @@ dependencies = [
 [[package]]
 name = "openvm-native-recursion"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "cfg-if",
  "itertools 0.13.0",
@@ -3355,9 +3366,9 @@ dependencies = [
 [[package]]
 name = "openvm-pairing-circuit"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
- "derive-new",
+ "derive-new 0.6.0",
  "derive_more 1.0.0",
  "eyre",
  "itertools 0.13.0",
@@ -3386,7 +3397,7 @@ dependencies = [
 [[package]]
 name = "openvm-pairing-guest"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "group 0.13.0",
  "halo2curves-axiom",
@@ -3411,7 +3422,7 @@ dependencies = [
 [[package]]
 name = "openvm-pairing-transpiler"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "openvm-instructions",
  "openvm-instructions-derive",
@@ -3425,7 +3436,7 @@ dependencies = [
 [[package]]
 name = "openvm-platform"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "getrandom",
  "libm",
@@ -3437,7 +3448,7 @@ dependencies = [
 [[package]]
 name = "openvm-poseidon2-air"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "derivative",
  "itertools 0.13.0",
@@ -3457,7 +3468,7 @@ dependencies = [
 [[package]]
 name = "openvm-prof"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "clap",
  "eyre",
@@ -3477,9 +3488,9 @@ dependencies = [
 [[package]]
 name = "openvm-rv32-adapters"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
- "derive-new",
+ "derive-new 0.6.0",
  "itertools 0.13.0",
  "openvm-circuit",
  "openvm-circuit-primitives",
@@ -3498,9 +3509,10 @@ dependencies = [
 [[package]]
 name = "openvm-rv32im-circuit"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
- "derive-new",
+ "bitcode",
+ "derive-new 0.6.0",
  "derive_more 1.0.0",
  "eyre",
  "itertools 0.13.0",
@@ -3524,7 +3536,7 @@ dependencies = [
 [[package]]
 name = "openvm-rv32im-guest"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "openvm-platform",
  "strum_macros",
@@ -3533,7 +3545,7 @@ dependencies = [
 [[package]]
 name = "openvm-rv32im-transpiler"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "openvm-instructions",
  "openvm-instructions-derive",
@@ -3549,7 +3561,7 @@ dependencies = [
 [[package]]
 name = "openvm-sdk"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "async-trait",
  "bitcode",
@@ -3592,7 +3604,7 @@ dependencies = [
 [[package]]
 name = "openvm-sha256-air"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "openvm-circuit-primitives",
  "openvm-stark-backend",
@@ -3603,10 +3615,10 @@ dependencies = [
 [[package]]
 name = "openvm-sha256-circuit"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "bitcode",
- "derive-new",
+ "derive-new 0.6.0",
  "derive_more 1.0.0",
  "openvm-circuit",
  "openvm-circuit-derive",
@@ -3627,7 +3639,7 @@ dependencies = [
 [[package]]
 name = "openvm-sha256-guest"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "openvm",
  "openvm-platform",
@@ -3637,7 +3649,7 @@ dependencies = [
 [[package]]
 name = "openvm-sha256-transpiler"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "openvm-instructions",
  "openvm-instructions-derive",
@@ -3650,12 +3662,13 @@ dependencies = [
 
 [[package]]
 name = "openvm-stark-backend"
-version = "0.2.0-alpha"
-source = "git+https://github.com/openvm-org/stark-backend.git?rev=d2788c#d2788c71e68aa386fc8c0d8f258c25557a1bbb09"
+version = "0.4.1-alpha"
+source = "git+https://github.com/openvm-org/stark-backend.git?tag=v1.0.0-rc.0#81b25d793c5ac2c34e5b90b1c9b724ac5e1b5e12"
 dependencies = [
  "async-trait",
  "cfg-if",
  "derivative",
+ "derive-new 0.7.0",
  "itertools 0.13.0",
  "mimalloc",
  "p3-air",
@@ -3675,9 +3688,10 @@ dependencies = [
 
 [[package]]
 name = "openvm-stark-sdk"
-version = "0.2.0-alpha"
-source = "git+https://github.com/openvm-org/stark-backend.git?rev=d2788c#d2788c71e68aa386fc8c0d8f258c25557a1bbb09"
+version = "0.4.1-alpha"
+source = "git+https://github.com/openvm-org/stark-backend.git?tag=v1.0.0-rc.0#81b25d793c5ac2c34e5b90b1c9b724ac5e1b5e12"
 dependencies = [
+ "derivative",
  "derive_more 0.99.18",
  "ff 0.13.0",
  "itertools 0.13.0",
@@ -3710,7 +3724,7 @@ dependencies = [
 [[package]]
 name = "openvm-transpiler"
 version = "0.2.0-alpha"
-source = "git+https://github.com/alv-around/openvm?branch=prometheus-recorder#a7729586e14eec84d53092737364eaf27d9aefa2"
+source = "git+https://github.com/alv-around/openvm?branch=memory-profiler#14df4b8ced5e09292e0cfcd3017efe60810f4076"
 dependencies = [
  "derive_more 1.0.0",
  "elf",
